@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Contact V4</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{% static 'contactcss/images/icons/favicon.ico' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'contactcss/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css"
+        href="{% static 'contactcss/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %} ">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'contactcss/vendor/animate/animate.css' %} ">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'contactcss/vendor/css-hamburgers/hamburgers.min.css' %} ">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'contactcss/vendor/animsition/css/animsition.min.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'contactcss/vendor/select2/select2.min.css' %} ">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'contactcss/vendor/daterangepicker/daterangepicker.css' %}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'contactcss/css/util.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'contactcss/css/main.css' %}">
+
+    <!--===============================================================================================-->
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        .container-contact100 {
+            background: whitesmoke;
+        }
+
+        .wrap-contact100 {
+            width: 900px;
+            ;
+        }
+
+        #imgheight {
+            height: 400px;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            #imgheight {
+                height: 200px;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://image.shutterstock.com/image-vector/education-logo-template-swoosh-modern-260nw-327593372.jpg"
+                width="30" height="30" class="d-inline-block align-top" alt="">
+            Shikshasilchar
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <img src="https://i2.wp.com/www.csscodelab.com/wp-content/uploads/2019/11/stripe-hero-background-effect-html-css.png?fit=1062%2C631&ssl=1"
+        id="imgheight">
+    <div class="container-contact100">
+        <div class="wrap-contact100">
+            <form action="" class="card p-2" method="post" id="registerform">{% csrf_token %}
+                <span class="contact100-form-title">
+                    Registration Form
+                </span>
+                <div class="wrap-input100 validate-input">
+                    <span class="label-input100">Name</span>
+                    <input class="input100" type="text" name="name" placeholder="Enter your name" required>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input">
+                    <span class="label-input100">School</span>
+                    <input class="input100" type="text" name="school" placeholder="Enter your number" required>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input">
+                    <span class="label-input100">Board</span>
+                    <input class="input100" type="text" name="board" placeholder="Enter your email addess">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input">
+                    <span class="label-input100">Class</span>
+                    <input class="input100" type="text" name="standard" placeholder="Enter your email addess">
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 input100-select">
+                    <span class="label-input100">Categories</span>
+                    <div>
+
+                        <select class="selection-2" name="category" required>
+                            <option value="">Choose...</option>
+                            <option>General Studies</option>
+                            <option>Drawing</option>
+                            <option>Music</option>
+                            <option>Guitar</option>
+                            <option>Dance</option>
+                            <option>Keyboard</option>
+                            <option>Personal Trainer</option>
+                        </select>
+                    </div>
+                    <span class="focus-input100"></span>
+                </div>
+
+                <hr>
+                <div class="wrap-input100 validate-input">
+                    <span class="label-input100">Address</span>
+                    <input class="input100" type="text" name="address" placeholder="Enter your name" required>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="wrap-input100 validate-input">
+                    <span class="label-input100">Mobile Number</span>
+                    <input class="input100" type="number" name="number" placeholder="Enter your number" required>
+                    <span class="focus-input100"></span>
+                </div>
+                <div class="container-contact100-form-btn">
+                    <div class="wrap-contact100-form-btn">
+                        <div class="contact100-form-bgbtn"></div>
+                        <button class="contact100-form-btn" type="submit">
+                            <span>
+                                Submit
+                                <i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $('#registerform').submit(function (event) {
+            var formData = {
+                'name': $('input[name=name]').val(),
+                'school': $('input[name=school]').val(),
+                'board': $('input[name=board]').val(),
+                'standard': $('input[name=standard]').val(),
+                'address': $('input[name=address]').val(),
+                'number': $('input[name=number]').val(),
+                'category': $('input[name=experience]').val(),
+                'csrfmiddlewaretoken': $('input[name=csrfmiddlewaretoken]').val()
+            };
+            $.ajax({
+                type: 'POST',
+                url: '/',
+                data: formData,
+                encode: true
+
+            })
+                .done(function (data) {
+                    console.log(data)
+                    data = JSON.parse(data);
+                    feedbackupdate = data;
+                    console.log(feedbackupdate);
+                    let text = feedbackupdate[0]['text'];
+                    mystr = `<li class="list-group-item d-flex justify-content-between align-items-center">${text}</li>`
+                    $('#item').append(mystr);
+                    alert("Your response has been recieved!");
+                    document.getElementById('registerform').reset();
+                });
+            event.preventDefault();
+        });
+    </script>
+
+
+</body>
+
+</html>
